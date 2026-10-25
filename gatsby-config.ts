@@ -1,15 +1,18 @@
 import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
+  jsxRuntime: "automatic",
   siteMetadata: {
-    title: `aidx`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Adriatic Islands DX-pedition 2027`,
+    siteUrl: `https://aidx.radio`
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
-  graphqlTypegen: true,
-  plugins: ["gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
+  graphqlTypegen: {
+    typesOutputPath: ".gatsby/gatsby-types.d.ts",
+  },
+  plugins: ["gatsby-plugin-sass", "gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/icon.png"

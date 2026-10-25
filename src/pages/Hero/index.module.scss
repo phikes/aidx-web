@@ -1,0 +1,7 @@
+.hero {
+  background:
+    radial-gradient(circle at top left, white, transparent 75%),
+    center/cover no-repeat url("./background.jpg");
+  background-blend-mode: lighten;
+  height: 75vh;
+}

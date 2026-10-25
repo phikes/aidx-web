@@ -1,3 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss" source(none);
+
+@source "../pages";
+@source "../components";
+
+@theme {
+  --font-display: "Barlow", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --color-aidx-navy: #022148;
+  --color-aidx-blue: #2683c8;
+  --color-aidx-light-blue: #46a0d6;
+  --color-aidx-orange: #f1652c;
+}
+
+@layer base {
+  body {
+    color: var(--color-aidx-navy);
+    font-family: var(--font-body);
+    font-weight: 400;
+  }
+}
